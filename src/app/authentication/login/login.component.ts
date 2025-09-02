@@ -39,6 +39,12 @@ export class LoginComponent implements OnInit {
       localStorage.removeItem('login');
     }
 
+    if(!localStorage.getItem('list')){
+      let list: any[] = [];
+      list.push({ username: 'umar', password: CryptoJS.SHA256('11111').toString(), userlist: true, analytics: true, adduser: true });
+      localStorage.setItem('list', JSON.stringify(list));
+    }
+
   }
 
   login_user(){
