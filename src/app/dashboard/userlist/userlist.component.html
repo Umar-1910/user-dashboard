@@ -1,0 +1,112 @@
+<app-header></app-header>
+
+<div class="d-flex">
+  
+  <app-sidebar></app-sidebar>
+
+  
+  <div class="m-5 w-100">
+
+    
+    <!-- <div class="d-flex justify-content-around">
+      
+      <div>
+
+        <h3 class="mb-3">
+          <strong>User Information</strong>
+        </h3>
+
+        <table class="table table-striped align-middle text-center">
+        
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>User Name</th>
+              <th>Department</th>
+              <th>Gender</th>
+              <th>Blood Group</th>
+              <th>Height</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr *ngFor="let info of user_info; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{info.name}}</td>
+              <td>{{info.department}}</td>
+              <td>{{info.gender}}</td>
+              <td>{{info.bloodgroup}}</td>
+              <td>{{info.height}}</td>
+            </tr>
+          </tbody>
+      
+        </table>
+
+      </div>
+
+      <div>
+
+        <h3 class="mb-3">
+          <strong>Admin Information</strong>
+        </h3>
+
+        <table class="table table-striped align-middle text-center">
+        
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>User Name</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr *ngFor="let admin of users; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{admin.username}}</td>
+            </tr>
+          </tbody>
+      
+        </table>
+
+      </div>
+
+
+    </div> -->
+
+    <div class="mb-4">
+      
+      <h3 class="mb-4 text-center">
+        <strong>User Details</strong>
+      </h3>
+
+      <div class="row">
+        
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let user of user_detail; let i = index">
+          
+          <div class="card shadow-sm text-center p-3 bg-light rounded">
+                        
+            <!-- <div class="d-flex justify-content-end">
+              <button (click)="Remove(i)" class="text-secondary border-0 bg-light">x</button>
+            </div> -->
+            
+            <div class="d-flex justify-content-center my-3">
+              <img [src]="user.image" class="rounded-circle" style="border: 1px black solid;">
+            </div>
+            
+            <h5 class="fw-bold mb-3">{{user.firstName}}</h5>
+            <span class="badge bg-info mb-3 px-3 py-2">{{user.company.title}}</span>
+            <p class="mb-2">{{user.phone}}</p> 
+            <p class="text-primary">{{user.email}}</p>
+          
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+  
+</div>

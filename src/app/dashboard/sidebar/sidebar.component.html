@@ -1,0 +1,19 @@
+<div class="bg-light shadow p-5 vh-100 w-100 sticky-top">
+
+    <div class="mb-5" *ngIf="role_userlist">
+        <h5>
+            <a [routerLink]="['/dashboard/userlist']" class="text-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover">User&nbsp;List</a>
+        </h5>
+    </div>
+    <div class="mb-5" *ngIf="role_analytics">
+        <h5>
+            <a [routerLink]="['/dashboard/analytics']" class="text-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover">Analytics</a>
+        </h5>
+    </div>
+    <div class="mb-5" *ngIf="role_adduser">
+        <h5>
+            <a [routerLink]="['/dashboard/adduser']" class="text-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover">Add&nbsp;User</a>
+        </h5>
+    </div>
+
+</div>  
